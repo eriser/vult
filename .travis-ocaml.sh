@@ -73,7 +73,7 @@ install_on_linux () {
     sudo add-apt-repository "${TRUSTY}"
     sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
     sudo apt-get -qq update
-    sudo apt-get install -y gcc-4.8 llvm
+    sudo apt-get install -y gcc-4.8
     sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 90
     sudo add-apt-repository -r "${TRUSTY}"
   fi
@@ -83,7 +83,7 @@ install_on_linux () {
     sudo add-apt-repository "${TRUSTY}"
     sudo apt-get -qq update
   fi
-
+  sudo apt-get install -y llvm
 }
 
 install_on_osx () {
