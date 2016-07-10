@@ -83,7 +83,10 @@ install_on_linux () {
     sudo add-apt-repository "${TRUSTY}"
     sudo apt-get -qq update
   fi
-  sudo apt-get install -y llvm
+  wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -
+  deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.8 main
+  sudo apt-get update
+  sudo apt-get install clang-3.8
 }
 
 install_on_osx () {
