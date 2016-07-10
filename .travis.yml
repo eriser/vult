@@ -7,3 +7,11 @@ env:
 os:
   - linux
   - osx
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-precise-3.8
+    packages:
+      - clang-3.8

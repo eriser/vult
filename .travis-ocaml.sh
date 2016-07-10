@@ -83,8 +83,6 @@ install_on_linux () {
     sudo add-apt-repository "${TRUSTY}"
     sudo apt-get -qq update
   fi
-  sudo apt-get update
-  sudo apt-get install libllvm-3.8-ocaml-dev
 }
 
 install_on_osx () {
