@@ -50,6 +50,7 @@ let parseFiles files =
       exit (-1)
 
 let main () =
+   Vllvm.run ();
    let args = processArguments () in
    (* Parse the files *)
    let parser_results = parseFiles args.files in

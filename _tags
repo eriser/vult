@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 2cea5d9477e4b87051867bf233c3cf27)
+# DO NOT EDIT (digest: 6cb13fb4baac7e25ff7ed8ffef1ff32c)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -41,6 +41,7 @@ true: annot, bin_annot
 # Library vult_generators
 "src/generators/vult_generators.cmxs": use_vult_generators
 <src/generators/*.ml{,i,y}>: pkg_containers
+<src/generators/*.ml{,i,y}>: pkg_llvm
 <src/generators/*.ml{,i,y}>: pkg_pla
 <src/generators/*.ml{,i,y}>: pkg_pla.ppx
 <src/generators/*.ml{,i,y}>: pkg_ppx_deriving.std
@@ -52,6 +53,7 @@ true: annot, bin_annot
 "src/vult.cmxs": use_vult
 # Executable vultc
 "src/vultc.native": pkg_containers
+"src/vultc.native": pkg_llvm
 "src/vultc.native": pkg_pla
 "src/vultc.native": pkg_pla.ppx
 "src/vultc.native": pkg_ppx_deriving.std
@@ -66,6 +68,7 @@ true: annot, bin_annot
 "src/vultc.byte": oasis_executable_vultdebug_byte
 <src/*.ml{,i,y}>: oasis_executable_vultdebug_byte
 "src/vultc.byte": pkg_containers
+"src/vultc.byte": pkg_llvm
 "src/vultc.byte": pkg_pla
 "src/vultc.byte": pkg_pla.ppx
 "src/vultc.byte": pkg_ppx_deriving.std
@@ -80,6 +83,7 @@ true: annot, bin_annot
 "src/vult_node.byte": pkg_containers
 "src/vult_node.byte": pkg_js_of_ocaml
 "src/vult_node.byte": pkg_js_of_ocaml.syntax
+"src/vult_node.byte": pkg_llvm
 "src/vult_node.byte": pkg_pla
 "src/vult_node.byte": pkg_pla.ppx
 "src/vult_node.byte": pkg_ppx_deriving.std
@@ -93,6 +97,7 @@ true: annot, bin_annot
 <src/*.ml{,i,y}>: pkg_containers
 <src/*.ml{,i,y}>: pkg_js_of_ocaml
 <src/*.ml{,i,y}>: pkg_js_of_ocaml.syntax
+<src/*.ml{,i,y}>: pkg_llvm
 <src/*.ml{,i,y}>: pkg_pla
 <src/*.ml{,i,y}>: pkg_pla.ppx
 <src/*.ml{,i,y}>: pkg_ppx_deriving.std
@@ -105,6 +110,7 @@ true: annot, bin_annot
 <src/*.ml{,i,y}>: use_vult_util
 # Executable vult_tests
 <test/test.{native,byte}>: pkg_containers
+<test/test.{native,byte}>: pkg_llvm
 <test/test.{native,byte}>: pkg_oUnit
 <test/test.{native,byte}>: pkg_pla
 <test/test.{native,byte}>: pkg_pla.ppx
@@ -118,6 +124,7 @@ true: annot, bin_annot
 <test/test.{native,byte}>: use_vult_templates
 <test/test.{native,byte}>: use_vult_util
 <test/*.ml{,i,y}>: pkg_containers
+<test/*.ml{,i,y}>: pkg_llvm
 <test/*.ml{,i,y}>: pkg_oUnit
 <test/*.ml{,i,y}>: pkg_pla
 <test/*.ml{,i,y}>: pkg_pla.ppx

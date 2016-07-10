@@ -59,7 +59,8 @@ Library "vult_generators"
     CLike,
     VultToCLike,
     DefaultReplacements,
-    Replacements
+    Replacements,
+    Vllvm
   BuildDepends:
     vult_core,
     vult_util,
@@ -68,7 +69,8 @@ Library "vult_generators"
     ppx_deriving.std,
     containers,
     pla,
-    pla.ppx
+    pla.ppx,
+    llvm
 
 Library "vult_templates"
   Path: src/generators/templates
